@@ -65,6 +65,7 @@ body{
     height: 700px;
     background-color: blue;    
     padding: 40px;
+    display:none;
 }
 
 .Drawing-Position{
@@ -83,7 +84,11 @@ body{
 .buttons2-position{
     padding: 5px;
 }
-
+.buttons2{
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+    grid-template-rows: repeat(15,1fr);
+}
 .buttons3-position{
     width: 100%;
     align-items: center;

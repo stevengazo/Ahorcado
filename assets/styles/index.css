@@ -17,6 +17,7 @@ body{
 }
 .title-1{
     margin-top: 40px;
+    color:whitesmoke;
 
 }
 .ErrorMessage{
@@ -69,10 +70,14 @@ body{
     padding: 40px;
     display:none;
 }
+.game-position{
+    text-align: center;
+}
+
 
 .Drawing-Position{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;   
     color: antiquewhite; 
     margin-bottom: 20px;
@@ -85,6 +90,16 @@ body{
 }
 .buttons2-position{
     padding: 5px;
+    color:whitesmoke
+}
+.information-Position{
+    height: 498px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid whitesmoke;
+}
+.Information
+    border: 1px solid whitesmoke;
 }
 .buttons2{
     display: grid;

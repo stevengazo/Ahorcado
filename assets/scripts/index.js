@@ -5,8 +5,6 @@ let alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 let NumbersAndSymbols = ['0','1','2','3','4','5','6','7','8','9','0','_'];
 
 
-
-
 const buttonPlay= document.getElementById("buttonPlay");
 buttonPlay.addEventListener("click",initPlay);
 
@@ -35,6 +33,8 @@ function samplehandler(event){
     const element=  event.target; 
     debugger;
     alert(`Onclick: "${element.innerText}"`);
+    element.style.display='none';
+    element.style.visibility = 'hidden';
 }
 
 
@@ -61,6 +61,14 @@ function initPlay(){
         errorMessage.innerText= "¡No introdujo los datos necesarios!";
     }
 }
+
+
+
+const pase = document.getElementById('pase');
+pase.addEventListener('click',()=>{
+    div1.style.display= "none";
+    div2.style.display="inherit";  
+});
 
 
 

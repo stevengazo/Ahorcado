@@ -1,11 +1,13 @@
 body{
     margin: 0px;
+    width: 100%;
+    height: 100%;
     font-family: 'lato';
 }
 
 .Part1{
     width: 100%;
-    height: 100%;
+    height: 150%;
     background-color: rgb(6, 2, 48);    
     color:whitesmoke;
     display: flex;

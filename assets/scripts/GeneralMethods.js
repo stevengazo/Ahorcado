@@ -1,10 +1,10 @@
 
 class GeneralMethods{
-    cleanInputs = ()=>{
-        inputWorld.value="";
-        input1.value= "";
-        input2.value= "";
-        input3.value= "";
+    cleanInputs = (values)=>{
+        values[0].value="";
+        values[1].value= "";
+        values[2].value= "";
+        values[3].value= "";
     }
     
     validateValues = function(inputs=['']){
@@ -28,23 +28,22 @@ class GeneralMethods{
     }
 
    GenerateLetters=function(values){
-        let divButtons = values[1];
-        debugger;
-        const btnsAlphabet = values[0].map((letter)=>{ 
-            debugger;       
+        let divButtons = values[1];  
+        const btnsAlphabet = values[0].map((letter)=>{                  
             let button = document.createElement("button");
             button.innerText = `${letter.toUpperCase()}`;
             button.classList.add(`button-style-2`);
             button.setAttribute(`ìd`,`button-${letter.toUpperCase()}`);
-            button.setAttribute(`onclick`,`samplehandler('${letter.toUpperCase()}')`);    
-            divButtons.appendChild(button);
+            //button.setAttribute(`onclick`,`samplehandler('${letter.toUpperCase()}')`);    
+
             return button;
         });
         return btnsAlphabet;    
     }
-
-
 }
+
+
+
 
 
 

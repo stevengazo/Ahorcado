@@ -2,6 +2,9 @@ import GeneralMethods from "./GeneralMethods.js";
 
 let alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
+const buttonPlay= document.getElementById("buttonPlay");
+buttonPlay.addEventListener("click",initPlay);
+
 const div1 = document.getElementById("Part1");
 const div2 = document.getElementById("Part2");
 
@@ -24,13 +27,14 @@ function samplehandler(value){
 
 function initPlay(){
     let general =new  GeneralMethods();
-
-    const IsValid = general.validateValues();
+    debugger;
+    const IsValid = general.validateValues([inputWorld.value,input1.value,input2.value,input3.value]);
+    debugger;
     if(IsValid){
         errorMessage.innerText= "";
         alert("cambio");
         div1.style.display= "none";
-        const listofBtns= general.GenerateLetters({alphabet,divButtons2});
+        const listofBtns= general.GenerateLetters([alphabet,divButtons2]);
         div2.style.display="inherit";        
     }
     else{

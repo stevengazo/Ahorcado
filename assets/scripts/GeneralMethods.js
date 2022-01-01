@@ -7,23 +7,31 @@ class GeneralMethods{
         input3.value= "";
     }
     
-    validateValues = function(){
-        let bandInputWorld = (inputWorld.value !=='') ? true: false;
-        let bandInput1 = (input1.value !=='') ? true: false;
-        let bandInput2 = (input2.value !=='') ? true: false;
-        let bandInput3 = (input3.value !=='') ? true: false;
-    
-        if( bandInput1 && bandInputWorld && bandInput2 && bandInput3){
-            return true;
+    validateValues = function(inputs=['']){
+        var bandFalse = inputs.map((element)=>{
+            if(element!==''){
+                return true;
+            }else{
+                return false;
+            }
+        });        
+        for (let index = 0; index < bandFalse.length; index++) {
+            const element = bandFalse[index];
+            if(element !== true){
+                return false;
+            }
+            else{
+            }            
         }
-        else{
-            return false;
-        }
+        return true;
+        
     }
 
-   GenerateLetters=function({alphabet,div}){
-        let divButtons = div;
-        const btnsAlphabet = alphabet.map((letter)=>{
+   GenerateLetters=function(values){
+        let divButtons = values[1];
+        debugger;
+        const btnsAlphabet = values[0].map((letter)=>{ 
+            debugger;       
             let button = document.createElement("button");
             button.innerText = `${letter.toUpperCase()}`;
             button.classList.add(`button-style-2`);

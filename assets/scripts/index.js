@@ -1,3 +1,5 @@
+import GeneralMethods from "./GeneralMethods.js";
+
 let alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 const div1 = document.getElementById("Part1");
@@ -12,19 +14,7 @@ const input3 = document.getElementById("prueba3");
 
 const divButtons2 = document.getElementById("buttons2");
 
-function GenerateLetters(){
-    let divButtons = divButtons2;
-    const btnsAlphabet = alphabet.map((letter)=>{
-        let button = document.createElement("button");
-        button.innerText = `${letter.toUpperCase()}`;
-        button.classList.add(`button-style-2`);
-        button.setAttribute(`ìd`,`button-${letter.toUpperCase()}`);
-        button.setAttribute(`onclick`,`samplehandler('${letter.toUpperCase()}')`);    
-        divButtons.appendChild(button);
-        return button;
-    });
-    return btnsAlphabet;    
-}
+
 
 function samplehandler(value){
     alert(`samplehander ${value}`);
@@ -40,7 +30,7 @@ function initPlay(){
         errorMessage.innerText= "";
         alert("cambio");
         div1.style.display= "none";
-        const listofBtns=GenerateLetters();
+        const listofBtns= general.GenerateLetters({alphabet,divButtons2});
         div2.style.display="inherit";        
     }
     else{
@@ -53,35 +43,17 @@ function initPlay(){
 
 class drawingPerson{
     canvas = document.getElementById("canvas")
-
+    ctx = this.canvas.getContext("2d");
     line=function(){
-        var ctx = this.canvas.getContext("2d");
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(0, 0, 150, 75);
+        this.ctx.fillStyle = "#FF0000";
+        this.ctx.fillRect(0, 0, 150, 75);
+    }
+    circule= function(){
+        this.ctx.beginPath();
+        this.ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+        this.ctx.stroke();
     }
 
-}
-
-class GeneralMethods{
-    cleanInputs = ()=>{
-        inputWorld.value="";
-        input1.value= "";
-        input2.value= "";
-        input3.value= "";
-    }
-    validateValues = function(){
-        let bandInputWorld = (inputWorld.value !=='') ? true: false;
-        let bandInput1 = (input1.value !=='') ? true: false;
-        let bandInput2 = (input2.value !=='') ? true: false;
-        let bandInput3 = (input3.value !=='') ? true: false;
-    
-        if( bandInput1 && bandInputWorld && bandInput2 && bandInput3){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
 }
 
 

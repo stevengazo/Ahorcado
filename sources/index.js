@@ -1,6 +1,8 @@
 import GeneralMethods from "./utils/GeneralMethods.js";
 import DrawingPerson from "./utils/DrawingPerson.js";
 
+let draw = new DrawingPerson();
+
 let world;
 
 

@@ -1,5 +1,5 @@
-import GeneralMethods from "./GeneralMethods.js";
-import DrawingPerson from "./DrawingPerson.js";
+import GeneralMethods from "./utils/GeneralMethods.js";
+import DrawingPerson from "./utils/DrawingPerson.js";
 
 let world;
 

@@ -24,6 +24,9 @@ body{
     color:whitesmoke;
 
 }
+.info-Message{
+    color:whitesmoke;
+}
 .ErrorMessage{
     font:italic;
     color: red;

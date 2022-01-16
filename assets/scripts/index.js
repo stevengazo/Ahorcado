@@ -65,19 +65,21 @@ function checkLetter(Letter) {
     debugger;
     if( value !== undefined){
         ///Letra encontrada
-        alert(`La letra ${letter.innerText} ha sido encontrada`);
+        const info_Message= document.getElementById("info-Message");
+        info_Message.style.color= "green";
+        info_Message.innerText=`${Letter} se encontró`;
         for (let I = 0; I < world.length; I++) {
             if(world[I].letter == Letter){
                 world[I].idFound= true;            
             }            
         };
-        debugger;
         return true;
     }
     else{
         ///Letra No encontrada
-        alert(`Letra no encontrada`);
-        debugger;
+        const info_Message= document.getElementById("info-Message");
+        info_Message.style.color= "red";
+        info_Message.innerText=`${Letter} no se encontró`;
         return false;
     }    
 }

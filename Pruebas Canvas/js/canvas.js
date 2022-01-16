@@ -1,6 +1,6 @@
-
 class drawingPerson{
-    canvas= document.getElementById("canvas")
+    canvas = document.getElementById("canvas")
+    canvasWidth = canvas.atr
     ctx = this.canvas.getContext("2d");
 
     cesped=() =>{
@@ -31,6 +31,3 @@ class drawingPerson{
     }
 }
 
-
-
-export default drawingPerson;

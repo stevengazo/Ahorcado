@@ -36,7 +36,6 @@ const divButtons3 = document.getElementById("buttons3");
 
 function samplehandler(event){
     const element=  event.target; 
-    alert(`Onclick: "${element.innerText}"`);
     const bandFound = checkLetter(element.innerText);
     if(bandFound){
         wrotteWorld();

@@ -7,7 +7,7 @@ let world;
 
 
 let alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let NumbersAndSymbols = ['0','1','2','3','4','5','6','7','8','9','0',' '];
+let NumbersAndSymbols = ['0','1','2','3','4','5','6','7','8','9','0','-'];
 
 
 const buttonPlay= document.getElementById("buttonPlay");
@@ -122,6 +122,9 @@ function initPlay(){
 
         const tmpworld = Array.from(inputWorld.value);
         world = tmpworld.map(function (element) {
+            if(element===" "){
+                element ="-";
+            }
             let tmpObjet = {
                 letter : element.toUpperCase(),
                 idFound: false

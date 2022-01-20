@@ -30,10 +30,17 @@ class GeneralMethods{
 
     foundInvalidLetters = function(world,alphabet, others){
         world = Array.from(world);
-        const values = alphabet.concat(others);
+        let values = alphabet.concat(others);
+        values =values.map((element)=>{
+            return element.toUpperCase();
+        });
         let InvalidCharacters = [];
         for (let i = 0; i < world.length; i++) {
-            const BandInvalid = values.includes(world[i]);            
+            if(world[i] ==" "){
+                world[i]= "-";
+            }
+            const BandInvalid = values.includes(world[i].toUpperCase());
+            debugger;            
             if(!BandInvalid){            
                 const value = world[i];
                 InvalidCharacters.push( world[i]);

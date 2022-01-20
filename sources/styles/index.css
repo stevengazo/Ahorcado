@@ -119,3 +119,6 @@ body{
     align-items: center;
     justify-content: center;
 }
+.pistas:hover{
+    color:red;
+}

@@ -16,7 +16,7 @@ buttonPlay.addEventListener("click",initPlay);
 const btnClean = document.getElementById("btnClean");
 btnClean.addEventListener('click',()=>{
     const general = new GeneralMethods();
-    general.cleanInputs([inputWorld,input1,input2,input3]);
+    general.cleanInputs([inputWorld,prueba1,prueba2,prueba3]);
 });
 
 
@@ -26,9 +26,9 @@ const div2 = document.getElementById("Part2");
 const errorMessage = document.getElementById("message");
 
 const inputWorld = document.getElementById("world");
-const input1 = document.getElementById("prueba1");
-const input2 = document.getElementById("prueba2");
-const input3 = document.getElementById("prueba3");
+const prueba1 = document.getElementById("prueba1");
+const prueba2 = document.getElementById("prueba2");
+const prueba3 = document.getElementById("prueba3");
 
 const divButtons2 = document.getElementById("buttons2");
 const divButtons3 = document.getElementById("buttons3");
@@ -89,7 +89,7 @@ function checkLetter(Letter) {
 function initPlay(){
     let general =new  GeneralMethods();
 
-    const IsValid = general.validateValues([inputWorld.value,input1.value,input2.value,input3.value]);
+    const IsValid = general.validateValues([inputWorld.value,prueba1.value,prueba2.value,prueba3.value]);
 
     if(IsValid){
         errorMessage.innerText= "";
@@ -131,6 +131,19 @@ pase.addEventListener('click',()=>{
 });
 
 
+const pista1 = document.getElementById('pista-1');
+pista1.addEventListener('click',(element)=>{        
+    pista1.innerText = prueba1.value;
+});
+
+const pista2 = document.getElementById('pista-2');
+pista2.addEventListener('click',(element)=>{        
+    pista2.innerText = prueba2.value;
+});
+const pista3 = document.getElementById('pista-3');
+pista3.addEventListener('click',(element)=>{        
+    pista3.innerText = prueba3.value;
+});
 
 
 

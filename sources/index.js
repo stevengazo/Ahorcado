@@ -7,7 +7,7 @@ let world;
 
 
 let alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let NumbersAndSymbols = ['0','1','2','3','4','5','6','7','8','9','0','_'];
+let NumbersAndSymbols = ['0','1','2','3','4','5','6','7','8','9','0',' '];
 
 
 const buttonPlay= document.getElementById("buttonPlay");
@@ -90,8 +90,22 @@ function initPlay(){
     let general =new  GeneralMethods();
 
     const IsValid = general.validateValues([inputWorld.value,prueba1.value,prueba2.value,prueba3.value]);
+    const checkLetters = general.foundInvalidLetters(inputWorld.value,alphabet,NumbersAndSymbols);
+    const invalidLetters = (checkLetters.length !== 0) ? true : false;
 
-    if(IsValid){
+
+
+
+
+    if(invalidLetters)
+    {
+        errorMessage.innerText= `Letras no validas ${checkLetters}`;
+    }
+    else if(!IsValid){    
+        errorMessage.innerText= "¡No introdujo los datos necesarios!";
+    }
+    else
+    {        
         errorMessage.innerText= "";
         div1.style.display= "none";
         const listofBtns= general.GenerateLetters([alphabet,divButtons2]);
@@ -117,9 +131,6 @@ function initPlay(){
         wrotteWorld();    
     }
 
-    else{
-        errorMessage.innerText= "¡No introdujo los datos necesarios!";
-    }
 }
 
 

@@ -6,16 +6,20 @@ import DrawingPerson from "./utils/DrawingPerson.js";
 const div1 = document.getElementById("Part1");
 const div2 = document.getElementById("Part2");
 const errorMessage = document.getElementById("message");
+
 // Input text fields of the document
 const inputWorld = document.getElementById("world");
 const prueba1 = document.getElementById("prueba1");
 const prueba2 = document.getElementById("prueba2");
 const prueba3 = document.getElementById("prueba3");
+
 // helps for the playes
 const divButtons2 = document.getElementById("buttons2");
 const divButtons3 = document.getElementById("buttons3");
+
 // variable to save the word;
 let world;
+
 // alphabet and numbers available to use
 let alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let NumbersAndSymbols = ['0','1','2','3','4','5','6','7','8','9','0','-'];
@@ -47,12 +51,23 @@ function samplehandler(event){
     if(bandFound){
         wrotteWorld();
     }else{
-        quantityOfAttemps --;
-        lblAttemps= ``;
+        // dibujar elemento
+        debugger;
+        quantityOfAttemps  --;        
+        if(quantityOfAttemps<=0){
+            // Lose
+            lblAttemps.innerText = `No quedan intentos`;
+            lblAttemps.style.color=`red`;
+        }else{
+            // Continue playing
+            lblAttemps.innerText= `Quedan ${quantityOfAttemps} Intentos`;
+        }
+        
     }
     element.style.display='none';
     element.style.visibility = 'hidden';
 }
+
 
 /// Generate the positions and render the letter in the page
 function wrotteWorld() {

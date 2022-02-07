@@ -9,55 +9,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Readex+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <title>Ahorcado</title>
-</head>
-<body>
-    <section class="section">
-        <div id="Part1" class="Part1">
-            <div id="title1" >
-                <h2 class="title-1">Juego de Ahorcado</h2>
-                <p>Digita la palabra y las pistas</p>
-                <p id="message" class="ErrorMessage"><i></i></p>
-            </div>                    
-            <div id="inputs1" class="inputs-position">
-                <input type="text" id="world" placeholder="Palabra" class="text-input">                
-                <input type="text" id="prueba1" placeholder="Pista 1" class="text-input">
-                <input type="text" id="prueba2" placeholder="Pista 2" class="text-input">
-                <input type="text" id="prueba3" placeholder="Pista 3" class="text-input">
-            </div>
-            <div id="buttons1" class="buttons-position">
-                <button id="buttonPlay"  class="button-style-1">¡A Jugar!</button>
-                <button id="btnClean"  class="button-style-1">Limpiar</button>
-                <button id="pase"  class="button-style-1">pase</button>
-            </div>                            
-        </div>
-
- 
-        <div id="Part2" class="Part2">
-            <div id="game-position" class="game-position">
-                <h1 class="title-1" >Ahorcado</h1>
-                <h4 id="info-Message" class="info-Message">hljk</h4>
-                <div id="Drawing" class="Drawing-Position">    
-                    <canvas class="canvas" id="canvas" ></canvas>
-                    <div id="information-Position" class="information-Position">
-                        <p id="">La palabra es:</p>
-                        <p id="Information"></p>
-                        <p id="pista-1" class="pistas">pista 1</p>
-                        <p id="pista-2" class="pistas">pista 2</p>
-                        <p id="pista-3" class="pistas">pista 3</p>
-                    </div>
+    </head>
+    <body>
+        <section class="section">
+            <div id="Part1" class="Part1">
+                <div id="title1" >
+                    <h2 class="title-1">Juego de Ahorcado</h2>
+                    <p>Digita la palabra y las pistas</p>
+                    <p id="message" class="ErrorMessage"><i></i></p>
+                </div>                    
+                <div id="inputs1" class="inputs-position">
+                    <input type="text" id="world" placeholder="Palabra" class="text-input">                
+                    <input type="text" id="prueba1" placeholder="Pista 1" class="text-input">
+                    <input type="text" id="prueba2" placeholder="Pista 2" class="text-input">
+                    <input type="text" id="prueba3" placeholder="Pista 3" class="text-input">
                 </div>
-            </div>            
-            <div id="letter" class="letter-position">
+                <div id="buttons1" class="buttons-position">
+                    <button id="buttonPlay"  class="button-style-1">¡A Jugar!</button>
+                    <button id="btnClean"  class="button-style-1">Limpiar</button>
+                    <button id="pase"  class="button-style-1">pase</button>
+                </div>                            
             </div>
-            <div class="buttons2-position">
+
+
+             <div id="Part2" class="Part2">
+                <div id="game-position" class="game-position">
+                    <h1 class="title-1" >Ahorcado</h1>
+                    <h4 id="info-Message" class="info-Message">hljk</h4>
+                    <div id="Drawing" class="Drawing-Position">    
+                        <canvas class="canvas" id="canvas" ></canvas>                    
+                        <div id="information-Position" class="information-Position">
+                            <div>
+                                <h4>
+                                    Intentos
+                                </h4>
+                                <h5 id="lblIntentos"></h5>
+                            </div>
+                            <p id="">La palabra es:</p>
+                            <p id="Information"></p>
+                            <p id="pista-1" class="pistas">pista 1</p>
+                            <p id="pista-2" class="pistas">pista 2</p>
+                            <p id="pista-3" class="pistas">pista 3</p>
+                        </div>
+                    </div>
+                </div>            
+                <div id="letter" class="letter-position">
+                </div>
+                <div class="buttons2-position">
                 <div id="buttons2">                                                    
                 </div>
                 <div id="buttons3">                                    
                 </div>
-            </div>        
-        </div>
-
-    </section>
-    <script type="module"  src="./sources/index.js"></script>    
-</body>
+                </div>        
+            </div>
+        </section>
+        <script type="module"  src="./sources/index.js"></script>    
+    </body>
 </html>
